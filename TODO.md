@@ -13,7 +13,7 @@
 
 ## Étape 3: Pipeline CI/CD avec GitHub Actions
 - [x] Créer .github/workflows/deploy.yml pour automatiser le déploiement sur push vers main.
-- [ ] Tester le workflow localement si possible.
+- [x] Tester le workflow localement si possible.
 
 ## Étape 4: Déploiement initial
 - [ ] Pousser les changements sur GitHub pour déclencher le déploiement.
