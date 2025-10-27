@@ -27,7 +27,14 @@ python manage.py migrate
 # Collecter les fichiers statiques
 python manage.py collectstatic --noinput
 
-# Redémarrer gunicorn
+# Configurer les variables d'environnement pour gunicorn
+echo "Environment=DJANGO_SETTINGS_MODULE=projetdjango.settings" | sudo tee -a /etc/systemd/system/gunicorn.service
+echo "Environment=DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY" | sudo tee -a /etc/systemd/system/gunicorn.service
+echo "Environment=DEBUG=$DEBUG" | sudo tee -a /etc/systemd/system/gunicorn.service
+echo "Environment=ALLOWED_HOSTS=$ALLOWED_HOSTS" | sudo tee -a /etc/systemd/system/gunicorn.service
+
+# Recharger systemd et redémarrer gunicorn
+sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 
 # Désactiver le site par défaut de nginx
