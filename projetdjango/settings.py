@@ -26,9 +26,15 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-ojak+q48qtij!(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else ['localhost', '127.0.0.1', '51.21.191.79']
+import sys
 
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else ['localhost', '127.0.0.1', '51.21.191.79']
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',') if os.environ.get('CSRF_TRUSTED_ORIGINS') else ['http://51.21.191.79']
+
+# Debug logging
+print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}", file=sys.stderr)
+print(f"DEBUG: {DEBUG}", file=sys.stderr)
+print(f"SECRET_KEY loaded: {'Yes' if SECRET_KEY != 'django-insecure-ojak+q48qtij!(i^_5)%-w!l&rd2bj(w+@##m=8o0j(r@+&&9v' else 'No'}", file=sys.stderr)
 
 
 # Application definition
