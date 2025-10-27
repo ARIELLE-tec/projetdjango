@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn daemon for projetdjango
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/projetdjango
+Environment="PATH=/home/ubuntu/projetdjango/venv/bin"
+EnvironmentFile=/home/ubuntu/projetdjango/.env
+ExecStart=/home/ubuntu/projetdjango/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 projetdjango.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
