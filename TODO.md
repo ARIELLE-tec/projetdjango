@@ -16,7 +16,7 @@
 - [x] Tester le workflow localement si possible.
 
 ## Étape 4: Déploiement initial
-- [ ] Pousser les changements sur GitHub pour déclencher le déploiement.
+- [x] Pousser les changements sur GitHub pour déclencher le déploiement.
 - [ ] Vérifier que le site fonctionne sur EC2.
 - [ ] Surveiller les logs pour les erreurs.
 
