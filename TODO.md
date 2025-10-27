@@ -6,10 +6,10 @@
 - [x] Créer un script deploy.sh pour automatiser les migrations, collectstatic, etc.
 
 ## Étape 2: Configuration de l'instance EC2
-- [ ] Installer Python, pip, virtualenv, nginx, gunicorn sur EC2.
-- [ ] Configurer nginx pour servir l'application Django.
-- [ ] Configurer les groupes de sécurité (ports 22, 80).
-- [ ] Générer et configurer les clés SSH pour GitHub Actions.
+- [x] Installer Python, pip, virtualenv, nginx, gunicorn sur EC2.
+- [x] Configurer nginx pour servir l'application Django.
+- [x] Configurer les groupes de sécurité (ports 22, 80).
+- [x] Générer et configurer les clés SSH pour GitHub Actions.
 
 ## Étape 3: Pipeline CI/CD avec GitHub Actions
 - [x] Créer .github/workflows/deploy.yml pour automatiser le déploiement sur push vers main.
