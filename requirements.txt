@@ -1,0 +1,5 @@
+Django==4.2.19
+gunicorn==21.2.0
+mysqlclient==2.2.4
+xhtml2pdf==0.2.16
+Pillow==10.4.0
