@@ -1,9 +1,9 @@
 # TODO: Déploiement Django sur AWS EC2 avec CI/CD
 
 ## Étape 1: Préparation du projet pour la production
-- [ ] Modifier projetdjango/settings.py : Désactiver DEBUG, définir ALLOWED_HOSTS, utiliser variables d'environnement pour SECRET_KEY.
-- [ ] Mettre à jour requirements.txt : Ajouter gunicorn et autres dépendances nécessaires.
-- [ ] Créer un script deploy.sh pour automatiser les migrations, collectstatic, etc.
+- [x] Modifier projetdjango/settings.py : Désactiver DEBUG, définir ALLOWED_HOSTS, utiliser variables d'environnement pour SECRET_KEY.
+- [x] Mettre à jour requirements.txt : Ajouter gunicorn et autres dépendances nécessaires.
+- [x] Créer un script deploy.sh pour automatiser les migrations, collectstatic, etc.
 
 ## Étape 2: Configuration de l'instance EC2
 - [ ] Installer Python, pip, virtualenv, nginx, gunicorn sur EC2.
@@ -12,7 +12,7 @@
 - [ ] Générer et configurer les clés SSH pour GitHub Actions.
 
 ## Étape 3: Pipeline CI/CD avec GitHub Actions
-- [ ] Créer .github/workflows/deploy.yml pour automatiser le déploiement sur push vers main.
+- [x] Créer .github/workflows/deploy.yml pour automatiser le déploiement sur push vers main.
 - [ ] Tester le workflow localement si possible.
 
 ## Étape 4: Déploiement initial
