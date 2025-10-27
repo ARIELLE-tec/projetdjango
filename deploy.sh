@@ -40,6 +40,10 @@ ALLOWED_HOSTS=$ALLOWED_HOSTS
 CSRF_TRUSTED_ORIGINS=http://$ALLOWED_HOSTS
 EOF
 
+# Vérifier que les variables sont chargées
+echo "Variables d'environnement dans .env:"
+cat .env
+
 # Recharger systemd et redémarrer gunicorn
 sudo systemctl daemon-reload
 sudo systemctl enable gunicorn
